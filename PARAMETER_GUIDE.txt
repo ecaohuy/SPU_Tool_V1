@@ -163,7 +163,6 @@ SPU_Tool_V1/
     ├── gui.py           # Tkinter GUI (window size, tabs here)
     ├── processor.py     # Data processing logic
     ├── mapping_engine.py# Mapping rules
-    ├── streamlit_app.py # Streamlit GUI (alternative)
     └── utils.py         # Utility functions
 
 ================================================================================
@@ -171,9 +170,9 @@ HOW TO RUN
 ================================================================================
 
 Using uv:
-    uv run python main.py --tkinter
+    uv run python main.py
 
 Using python directly (after installing dependencies):
-    python main.py --tkinter
+    python main.py
 
 ================================================================================
