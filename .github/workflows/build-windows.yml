@@ -1,0 +1,79 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches: [ main, master ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+        pip install pandas openpyxl
+
+    - name: Build executable with PyInstaller
+      run: |
+        pyinstaller --name "SPU_Tool" ^
+          --onedir ^
+          --windowed ^
+          --icon=icon.png ^
+          --add-data "src;src" ^
+          --add-data "Input;Input" ^
+          --add-data "Template;Template" ^
+          --add-data "Output;Output" ^
+          --add-data "config.json;." ^
+          --add-data "icon.png;." ^
+          --hidden-import pandas ^
+          --hidden-import openpyxl ^
+          --hidden-import tkinter ^
+          main.py
+      shell: cmd
+
+    - name: Create distribution package
+      run: |
+        # Copy additional files to dist folder
+        xcopy /E /I Input dist\SPU_Tool\Input
+        xcopy /E /I Template dist\SPU_Tool\Template
+        xcopy /E /I Output dist\SPU_Tool\Output
+        copy config.json dist\SPU_Tool\
+        copy icon.png dist\SPU_Tool\
+        copy PARAMETER_GUIDE.txt dist\SPU_Tool\
+      shell: cmd
+
+    - name: Create ZIP archive
+      run: |
+        cd dist
+        powershell Compress-Archive -Path SPU_Tool -DestinationPath SPU_Tool_Windows.zip
+      shell: cmd
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: SPU_Tool_Windows
+        path: dist/SPU_Tool_Windows.zip
+        retention-days: 30
+
+    - name: Upload Release Asset
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/SPU_Tool_Windows.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

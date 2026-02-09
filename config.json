@@ -1,0 +1,1797 @@
+{
+	"readme": "File json Viettel",
+	"Update": "Update 20251021",
+	"Author": "Ngochb4",
+	"mcc": "452",
+	"mnc": "04",
+	"province": {
+		"eDB": "DBN",
+		"gDB": "DBN",
+		"eSL": "SLA",
+		"gSL": "SLA",
+		"eCM": "1004",
+		"gCM": "1004",
+		"eBL": "1005",
+		"gBL": "1005"
+	},
+	"mme": {
+		"SGHL04": [
+			"10.202.17.53",
+			"10.202.17.54"
+		],
+		"SGHL05": [
+			"10.202.17.193",
+			"10.202.17.194"
+		],
+		"SGHL06": [
+			"10.202.19.193",
+			"10.202.19.194"
+		],
+		"SGHL07": [
+			"10.202.18.193",
+			"10.202.18.194"
+		],
+		"SGHL08": [
+			"10.202.20.193",
+			"10.202.20.194"
+		],
+		"SGHL09": [
+			"10.202.21.193",
+			"10.202.21.194"
+		],
+		"SGHL10": [
+			"10.192.85.9",
+			"10.192.85.10"
+		],
+		"SGHL11": [
+			"10.192.85.42",
+			"10.192.85.43"
+		],
+		"SGHL12": [
+			"10.192.118.9",
+			"10.192.118.10"
+		],
+		"SGHL13": [
+			"10.192.118.42",
+			"10.192.118.43"
+		],
+		"SGHL14": [
+			"10.192.85.74",
+			"10.192.85.75"
+		],
+		"SGHL15": [
+			"10.192.118.74",
+			"10.192.118.75"
+		],
+		"SGHL16": [
+			"10.192.153.200",
+			"10.192.153.201"
+		],
+		"SGHL17": [
+			"10.192.155.200",
+			"10.192.155.201"
+		],
+		"SGHL18": [
+			"10.192.157.200",
+			"10.192.157.201"
+		],
+		"SGHL19": [
+			"10.202.166.193"
+		],
+		"SGHL20": [
+			"10.202.160.193"
+		],
+		"SGHL21": [
+			"10.202.170.193"
+		],
+		"SGHK01": [
+			"10.215.17.65",
+			"10.215.17.66"
+		],
+		"SGHK02": [
+			"10.215.17.193",
+			"10.215.17.194"
+		],
+		"SGHK03": [
+			"10.215.18.193",
+			"10.215.18.194"
+		],
+		"SGHK06": [
+			"10.215.86.9",
+			"10.215.86.10"
+		],
+		"SGHK07": [
+			"10.215.128.81"
+		],
+		"SGHK08": [
+			"10.215.129.81"
+		],
+		"SGHK09": [
+			"10.215.130.81"
+		],
+		"SGHT07": [
+			"10.203.17.65",
+			"10.203.17.66"
+		],
+		"SGHT08": [
+			"10.203.17.193",
+			"10.203.17.194"
+		],
+		"SGHT09": [
+			"10.203.18.193",
+			"10.203.18.194"
+		],
+		"SGHT10": [
+			"10.203.19.193",
+			"10.203.19.194"
+		],
+		"SGHT11": [
+			"10.203.20.193",
+			"10.203.20.194"
+		],
+		"SGHT12": [
+			"10.203.85.9",
+			"10.203.85.10"
+		],
+		"SGPL01": [
+			"10.204.80.81"
+		],
+		"SGPL02": [
+			"10.204.81.81"
+		],
+		"SGPL03": [
+			"10.204.82.81"
+		],
+		"SGPL04": [
+			"10.204.83.81"
+		],
+		"SGHT16": [
+			"10.204.92.81"
+		],
+		"SGHT17": [
+			"10.204.93.81"
+		],
+		"SGHT18": [
+			"10.204.94.81"
+		]
+	},
+	"amf": {
+		"HLAMF01": [
+			"10.196.36.1",
+			"10.196.36.2"
+		],
+		"HLAMF02": [
+			"10.196.36.41",
+			"10.196.36.42"
+		]
+	},
+	"ptp_primary": [
+		"10.2.0.145",
+		"10.2.0.149",
+		"10.2.0.153",
+		"10.2.0.157"
+	],
+	"ptp_secondary": [
+		"10.2.0.161",
+		"10.2.0.165",
+		"10.2.0.169",
+		"10.2.0.173"
+	],
+	"rnc_ptp": {
+		"MWRC05": [
+			"10.225.242.1",
+			"10.225.242.5",
+			"10.225.243.1",
+			"10.225.243.5"
+		],
+		"MWRC06": [
+			"10.225.242.33",
+			"10.225.242.37",
+			"10.225.243.33",
+			"10.225.243.37"
+		],
+		"MWRC07": [
+			"10.225.242.65",
+			"10.225.242.69",
+			"10.225.243.65",
+			"10.225.243.69"
+		],
+		"MWRC08": [
+			"10.225.242.97",
+			"10.225.242.101",
+			"10.225.243.97",
+			"10.225.243.101"
+		],
+		"MWRC09": [
+			"10.225.242.129",
+			"10.225.242.133",
+			"10.225.243.129",
+			"10.225.243.133"
+		],
+		"DARC01": [
+			"10.2.0.1",
+			"10.2.0.25"
+		],
+		"DARC02": [
+			"10.2.0.17",
+			"10.2.0.41"
+		],
+		"DARC03": [
+			"10.2.0.33",
+			"10.2.0.57"
+		],
+		"DARC04": [
+			"10.2.0.49",
+			"10.2.0.9"
+		]
+	},
+	"bsc_ptp": {
+		"MWBC11": [
+			"10.225.255.1",
+			"10.225.255.5",
+			"10.225.255.9",
+			"10.225.255.13",
+			"10.225.255.17",
+			"10.225.255.21",
+			"10.225.255.33",
+			"10.225.255.37",
+			"10.225.255.41",
+			"10.225.255.45",
+			"10.225.255.49",
+			"10.225.255.53"
+		],
+		"MWBC12": [
+			"10.225.255.65",
+			"10.225.255.69",
+			"10.225.255.73",
+			"10.225.255.77",
+			"10.225.255.81",
+			"10.225.255.85",
+			"10.225.255.97",
+			"10.225.255.101",
+			"10.225.255.105",
+			"10.225.255.109",
+			"10.225.255.113",
+			"10.225.255.117"
+		],
+		"DABC01": [
+			"10.2.0.97",
+			"10.2.0.109"
+		],
+		"DABC02": [
+			"10.2.0.105",
+			"10.2.0.117"
+		],
+		"DABC03": [
+			"10.2.0.113",
+			"10.2.0.125"
+		],
+		"DABC04": [
+			"10.2.0.121",
+			"10.2.0.133"
+		],
+		"DABC05": [
+			"10.2.0.129",
+			"10.2.0.141"
+		],
+		"DABC06": [
+			"10.2.0.137",
+			"10.2.0.101"
+		]
+	},
+	"abis": {
+		"MWBC10": [
+			"10.5.20.161",
+			"10.5.20.165"
+		],
+		"MWBC11": [
+			"10.225.246.129",
+			"10.225.246.130"
+		],
+		"MWBC12": [
+			"10.225.246.145",
+			"10.225.246.146"
+		],
+		"MWBC13": [
+			"10.225.246.161",
+			"10.225.246.162"
+		],
+		"DABC07": [
+			"10.2.27.161",
+			"10.2.27.165"
+		],
+		"DABC08": [
+			"10.2.40.41",
+			"10.2.40.53"
+		],
+		"DABC06": [
+			"10.2.26.161",
+			"10.2.26.165"
+		],
+		"DABC05": [
+			"10.2.25.161",
+			"10.2.25.165"
+		],
+		"DABC04": [
+			"10.2.24.161",
+			"10.2.24.165"
+		],
+		"DABC02": [
+			"10.2.22.161",
+			"10.2.22.165"
+		],
+		"DABC01": [
+			"10.2.21.161",
+			"10.2.21.165"
+		],
+		"DABC03": [
+			"10.2.23.161",
+			"10.2.23.165"
+		]
+	},
+	"iub": {
+		"DARC01": [
+			"10.2.15.17",
+			"10.2.15.25",
+			"10.2.15.33",
+			"10.2.15.41",
+			"10.2.15.49",
+			"10.2.15.57",
+			"10.2.15.65",
+			"10.2.15.73"
+		],
+		"DARC02": [
+			"10.2.16.17",
+			"10.2.16.25",
+			"10.2.16.33",
+			"10.2.16.41",
+			"10.2.16.49",
+			"10.2.16.57",
+			"10.2.16.65",
+			"10.2.16.73"
+		],
+		"DARC03": [
+			"10.2.17.17",
+			"10.2.17.25",
+			"10.2.17.33",
+			"10.2.17.41",
+			"10.2.17.49",
+			"10.2.17.57",
+			"10.2.17.65",
+			"10.2.17.73"
+		],
+		"DARC04": [
+			"10.2.18.17",
+			"10.2.18.25",
+			"10.2.18.33",
+			"10.2.18.41",
+			"10.2.18.49",
+			"10.2.18.57",
+			"10.2.18.65",
+			"10.2.18.73"
+		],
+		"MWRC05": [
+			"10.225.247.1",
+			"10.225.247.2",
+			"10.225.247.3",
+			"10.225.247.4"
+		],
+		"MWRC06": [
+			"10.225.247.17",
+			"10.225.247.18",
+			"10.225.247.19",
+			"10.225.247.20"
+		],
+		"MWRC07": [
+			"10.225.247.33",
+			"10.225.247.34",
+			"10.225.247.35",
+			"10.225.247.36"
+		],
+		"MWRC08": [
+			"10.225.247.49",
+			"10.225.247.50",
+			"10.225.247.51",
+			"10.225.247.52"
+		],
+		"MWRC09": [
+			"10.225.247.65",
+			"10.225.247.66",
+			"10.225.247.67",
+			"10.225.247.68"
+		],
+		"MWRC10": [
+			"10.225.247.81",
+			"10.225.247.82",
+			"10.225.247.83",
+			"10.225.247.84"
+		]
+	},
+	"SPU": {
+		"V1.70.26": {
+			"bandwidth_mapping": {
+				"1.4": 0,
+				"3.0": 1,
+				"5.0": 2,
+				"10.0": 3,
+				"15.0": 4,
+				"20.0": 5,
+				"8.0": 6,
+				"16.0": 7,
+				"4.4": 8,
+				"2.4": 9,
+				"2.6": 10,
+				"2.8": 11,
+				"4.6": 12,
+				"4.8": 13,
+				"7.2": 14,
+				"7.4": 15,
+				"7.6": 16,
+				"7.8": 17,
+				"8.2": 18,
+				"8.4": 19,
+				"8.6": 20,
+				"8.8": 21,
+				"9.0": 22,
+				"9.2": 23,
+				"13.2": 24,
+				"13.6": 25,
+				"14.0": 26,
+				"17.4": 27,
+				"17.8": 28,
+				"18.2": 29,
+				"18.6": 30,
+				"7.5": 31,
+				"14.8": 32
+			},
+			"earfcn_mapping": {
+				"1850": 1870.0,
+				"19850": 1775.0,
+				"2950": 2640.0,
+				"20950": 2520.0,
+				"2800": 2625.0,
+				"20800": 2505.0,
+				"1700": 1855,
+				"9360": 773,
+				"27360": 718,
+				"300": 2140,
+				"9410": 778,
+				"40590": 2590,
+				"40390": 2570,
+				"19700": 1760,
+				"18300": 1950,
+				"27410": 723,
+				"250": 2135,
+				"18250": 1945,
+				"275": 2137.5,
+				"18275": 1947.5
+			},
+			"bandIndicator_mapping": {
+				"1850": 3,
+				"2800": 7,
+				"2950": 7,
+				"1700": 3,
+				"300": 1,
+				"250": 1,
+				"275": 1,
+				"9410": 28,
+				"40590": 41,
+				"40390": 41,
+				"9360": 28
+			},
+			"cell4g_fixed_values": {
+				"radioTemplate4G": "radio_lte_cudu_cell_template",
+				"eNBIdLength": 20,
+				"refPlmn": "452-04",
+				"sceneCfg": 0,
+				"urgencyeai": 0,
+				"cellSize": 2,
+				"mmModeSwch": 0,
+				"pb": 0,
+				"ranSharSwch": 0,
+				"dedctRANSharingSwch": 0,
+				"encrypAlgPriority": "0;1;2",
+				"rfAppMode": 0,
+				"pLMNId": "452-04"
+			},
+			"earfcnUl_mapping": {
+				"1700": 19700,
+				"1850": 19850,
+				"2800": 20800,
+				"2950": 20950,
+				"300": 18300,
+				"250": 18250,
+				"275": 18275,
+				"9410": 27410,
+				"9360": 27360,
+				"40590": 40590,
+				"40390": 40390
+			},
+			"uarfcn_mapping": {
+				"10562": "2112.4",
+				"10587": "2117.4",
+				"9612": "1922.4",
+				"9637": "1927.4"
+			},
+			"freqBand": {
+				"10562": 1,
+				"10587": 1
+			},
+			"rruPort_mapping": {
+				"12": "1-2",
+				"1-32": "1-32",
+				"1-64": "1-64",
+				"34": "3-4",
+				"1234": "1-4",
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4"
+			},
+			"arfcn5g": {
+				"504000": 2520,
+				"505998": 2529.99,
+				"507996": 2539.98,
+				"510000": 2550,
+				"502110": 2510.55
+			},
+			"AntNum": {
+				"A9652H_S36": 32,
+				"A9652H_S36(AWB)": 32,
+				"A9652A_S26": 32,
+				"A9651A_S26": 64
+			},
+			"eCPRI": [
+				"A9652H_S36",
+				"A9652H_S36(AWB)",
+				"A9652A_S26",
+				"A9651A_S26"
+			],
+			"hwWorkScence_mapping": {
+				"R9244_S9000(D6A)": {
+					"2G": "2",
+					"3G": "1",
+					"2G,3G": "1;2",
+					"2G,3G,4G": "1;2;16;64"
+				},
+				"R9264_M1821(ACA)": {
+					"2G": "1;2;16;64",
+					"2G,3G": "1;2;16;64",
+					"2G,3G,4G": "1;2;16;64",
+					"3G": "1;2;16;64",
+					"3G,4G": "1;2;16;64",
+					"4G": "1;2;16;64"
+				},
+				"R8854E_S2600(A6A)": {
+					"4G": "16"
+				},
+				"R9254E_S1800(A8A)": {
+					"4G": "16",
+					"5G": "8192"
+				},
+				"R9264S_M1821(AAA)": {
+					"4G": "1;2;16;64",
+					"4G,5G": "1;2;16;64;8192",
+					"5G": "1;2;16;64;8192"
+				},
+				"R9264_M7290N(ACA)": {
+					"4G": "1;2;16;64",
+					"4G,5G": "1;2;16;64;8192",
+					"5G": "1;2;16;64;8192"
+				},
+				"R9264S_M8590(A8A)": {
+					"4G": "1;2;16;64",
+					"4G,5G": "1;2;16;64;8192",
+					"5G": "1;2;16;64;8192"
+				},
+				"R8854_S2600(A4A)": {
+					"4G": "16"
+				},
+				"A9652A_S26": {
+					"4G": "32",
+					"5G": "8192",
+					"4G,5G": "32;8192"
+				},
+				"A9652H_S36": {
+					"4G": "32",
+					"5G": "8192",
+					"4G,5G": "32;8192"
+				},
+				"A9652H_S36(AWB)": {
+					"4G": "32",
+					"5G": "8192",
+					"4G,5G": "32;8192"
+				},
+				"A9651A_S26": {
+					"4G": "32",
+					"5G": "8192",
+					"4G,5G": "32;8192"
+				}
+			},
+			"functionMode_mapping": {
+				"R9244_S9000(D6A)": {
+					"2G": "0",
+					"3G": "1",
+					"2G,3G": "24",
+					"2G,3G,4G": "15"
+				},
+				"R9264_M1821(ACA)": {
+					"2G": "15",
+					"2G,3G": "15",
+					"2G,3G,4G": "15",
+					"3G": "15",
+					"3G,4G": "15",
+					"4G": "15"
+				},
+				"R8854E_S2600(A6A)": {
+					"4G": "1281"
+				},
+				"R8854_S2600(A4A)": {
+					"4G": "1281"
+				},
+				"A9652H_S36": {
+					"4G": "100729025",
+					"5G": "2147483649",
+					"4G,5G": "1074200577"
+				},
+				"A9652A_S26": {
+					"4G": "100729025",
+					"5G": "2147483649",
+					"4G,5G": "1074200577"
+				},
+				"A9652H_S36(AWB)": {
+					"4G": "100729025",
+					"5G": "2147483649",
+					"4G,5G": "1074200577"
+				},
+				"A9651A_S26": {
+					"4G": "100729025",
+					"5G": "2147483649",
+					"4G,5G": "1074200577"
+				},
+				"R9254E_S1800(A8A)": {
+					"2G": "20",
+					"2G,4G": "20",
+					"4G": "1281",
+					"4G,5G": "37",
+					"5G": "37"
+				},
+				"R9264S_M1821(AAA)": {
+					"4G": "15",
+					"4G,5G": "52",
+					"5G": "52"
+				},
+				"R9264_M7290N(ACA)": {
+					"2G": "15",
+					"2G,4G": "15",
+					"4G": "15",
+					"4G,5G": "52",
+					"5G": "52"
+				}
+			},
+			"baseband_configs": {
+				"VBPe3p": [
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe3p",
+						"hwWorkScence": "1;2;16",
+						"functionMode": "70415",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"VBPe1p": [
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe1p",
+						"hwWorkScence": "1;2;16",
+						"functionMode": "70413",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"VBPe3p+VBPe1p": [
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe3p",
+						"hwWorkScence": "1;2;16",
+						"functionMode": "70415",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe1p",
+						"hwWorkScence": "2;16",
+						"functionMode": "70156",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"VBPe3p+VBPe1p_14CC": [
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe3p",
+						"hwWorkScence": "1;2;16",
+						"functionMode": "70415",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe1p",
+						"hwWorkScence": "2;16",
+						"functionMode": "70156",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"VBPe3p+VBPe3p": [
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe3p",
+						"hwWorkScence": "1;2;16",
+						"functionMode": "70415",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe3p",
+						"hwWorkScence": "2;16",
+						"functionMode": "4621",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0"
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"1G;e3p_6_1G:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe3p",
+						"hwWorkScence": "16",
+						"functionMode": "69646",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"1G;e3p_6:24FDL;e3p_8:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe3p",
+						"hwWorkScence": "16",
+						"functionMode": "69646",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_8",
+						"name": "VBPe3p",
+						"hwWorkScence": "16",
+						"functionMode": "69646",
+						"bpPoolFunction": "BF_8",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"10G;e2q_3:6NR;e2q_6:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe2q",
+						"hwWorkScence": "16",
+						"functionMode": "4106",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "8192",
+						"functionMode": "32807",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:10G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"10G;e2q_3:3NR+6TDL;e2q_8:3NR+6TDL;e3p_6:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe3p",
+						"hwWorkScence": "16",
+						"functionMode": "69646",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VBP_1_8",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_8",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:10G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"10G;e2q_3:3NR+6TDL;e2q_6:24FDL;e3p_8:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe2q",
+						"hwWorkScence": "16",
+						"functionMode": "4106",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VBP_1_8",
+						"name": "VBPe3p",
+						"hwWorkScence": "16",
+						"functionMode": "69646",
+						"bpPoolFunction": "BF_8",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:10G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"10G;e2q_3:3NR+6TDL;e2q_6:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe2q",
+						"hwWorkScence": "16",
+						"functionMode": "4106",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:10G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"10G;e2q_3:3NR+6TDL;e2q_8:3NR+6TDL;e2q_6:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe2q",
+						"hwWorkScence": "16",
+						"functionMode": "4106",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VBP_1_8",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_8",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:10G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"1G;e2q_3:3NR+6TDL;e2q_6:24FDL;e3p_8:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe2q",
+						"hwWorkScence": "16",
+						"functionMode": "4106",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VBP_1_8",
+						"name": "VBPe3p",
+						"hwWorkScence": "16",
+						"functionMode": "69646",
+						"bpPoolFunction": "BF_8",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				],
+				"1G;e2q_3:3NR+6TDL;e2q_6:24FDL": [
+					{
+						"moId": "VBP_1_6",
+						"name": "VBPe2q",
+						"hwWorkScence": "16",
+						"functionMode": "4106",
+						"bpPoolFunction": "BF_6",
+						"redundancyModeSwitch": "0",
+						"lte": 24,
+						"nr": 0
+					},
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "32;8192",
+						"functionMode": "41009",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 6,
+						"nr": 3
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:1G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
+				]
+			},
+			"udttc_configs": {
+				"WEBLMT": {
+					"transType": "3",
+					"ipVersion": "0",
+					"ipAddr": "0.0.0.0",
+					"port": "1",
+					"localIP": "",
+					"serverIpPrefixLength": ""
+				},
+				"NDS-DCM": {
+					"transType": "0",
+					"ipVersion": "0",
+					"ipAddr": "10.29.147.162",
+					"port": "14061",
+					"localIP": "",
+					"serverIpPrefixLength": "27"
+				},
+				"NdsDefault": {
+					"transType": "0",
+					"ipVersion": "0",
+					"ipAddr": "10.29.147.131",
+					"port": "14061",
+					"serverIpPrefixLength": "27"
+				},
+				"OmcDefault": {
+					"transType": "0",
+					"ipVersion": "0",
+					"ipAddr": "10.29.147.131",
+					"port": "14066",
+					"serverIpPrefixLength": "27"
+				}
+			},
+			"drycontact_configs": [
+				{
+					"moId": "1",
+					"refDryContactPort": "VEM_1_13:EAM1",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "1",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092550",
+					"alarmNameOfOutput": "MAT DIEN"
+				},
+				{
+					"moId": "2",
+					"refDryContactPort": "VEM_1_13:EAM1",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "2",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092551",
+					"alarmNameOfOutput": "CHAY MAY NO"
+				},
+				{
+					"moId": "3",
+					"refDryContactPort": "VEM_1_13:EAM1",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "3",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092552",
+					"alarmNameOfOutput": "CAN NGUON ACQUY"
+				},
+				{
+					"moId": "4",
+					"refDryContactPort": "VEM_1_13:EAM1",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "4",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092553",
+					"alarmNameOfOutput": "SU CO TU DC"
+				},
+				{
+					"moId": "5",
+					"refDryContactPort": "VEM_1_13:EAM2",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "1",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092554",
+					"alarmNameOfOutput": "NHIET DO CAO"
+				},
+				{
+					"moId": "6",
+					"refDryContactPort": "VEM_1_13:EAM2",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "2",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092555",
+					"alarmNameOfOutput": "MO CUA"
+				},
+				{
+					"moId": "7",
+					"refDryContactPort": "VEM_1_13:EAM2",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "3",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092556",
+					"alarmNameOfOutput": "CANH BAO KHOI"
+				},
+				{
+					"moId": "8",
+					"refDryContactPort": "VEM_1_13:EAM2",
+					"refReplaceableUnit": "",
+					"refEmb": "",
+					"dryContactNo": "4",
+					"dryType": "0",
+					"alarmStatus": "1",
+					"alarmNameOfInput": "198092557",
+					"alarmNameOfOutput": "DIEN AC YEU"
+				}
+			],
+			"sync_configs": {
+				"GPS": {
+					"moId": "GPS",
+					"refReplaceableUnit": "VSW_1_1",
+					"clockPriority": "1",
+					"clockSyncMode": "1",
+					"clockType": "1",
+					"refGnssPort": "VSW_1_1:GNSS",
+					"receiverType": "3",
+					"enableSyncE": "0",
+					"isSSM": "0"
+				},
+				"G8275.1": {
+					"moId": "G8275-1",
+					"refReplaceableUnit": "VSW_1_1",
+					"clockPriority": "2",
+					"clockSyncMode": "1",
+					"clockType": "10",
+					"refGnssPort": "",
+					"receiverType": "",
+					"enableSyncE": "0",
+					"isSSM": "0"
+				},
+				"IEEE1588": {
+					"moId": "IEEE1588v2",
+					"refReplaceableUnit": "VSW_1_1",
+					"clockPriority": "3",
+					"clockSyncMode": "1",
+					"clockType": "10",
+					"refGnssPort": "",
+					"receiverType": "",
+					"enableSyncE": "0",
+					"isSSM": "0"
+				},
+				"PTP": {
+					"moId": "PTP",
+					"refReplaceableUnit": "VSW_1_1",
+					"clockPriority": "4",
+					"clockSyncMode": "0",
+					"clockType": "11",
+					"refGnssPort": "",
+					"receiverType": "",
+					"enableSyncE": "0",
+					"isSSM": "0"
+				}
+			}
+		},
+		"V1.70.27": {}
+	},
+	"BSC": {
+		"V12.11": {
+			"BVC": {
+				"2111": [
+					6961,
+					6962
+				],
+				"2112": [
+					6963,
+					6964
+				],
+				"2113": [
+					6965,
+					6966
+				]
+			},
+			"freqBand": {
+				"3": 2,
+				"8": 1
+			}
+		},
+		"V12.10": {}
+	},
+	"RNC": {
+		"V2.0": {
+			"tCell": {
+				"0": 0,
+				"256": 1,
+				"512": 2,
+				"768": 3,
+				"1024": 4,
+				"1280": 5,
+				"1536": 6,
+				"1792": 7,
+				"2048": 8,
+				"2304": 9
+			},
+			"eutranFreqBandInd": {
+				"1850": 2,
+				"2950": 6,
+				"2800": 6
+			},
+			"earfcnUl": {
+				"1850": 19850,
+				"2950": 20950,
+				"2800": 20800
+			},
+			"freqBandInd": {
+				"10562": 0,
+				"10587": 0
+			},
+			"bandIndicator_2G": {
+				"3": 0,
+				"8": 2
+			}
+		},
+		"V1.70.27": {
+			"du phong": ""
+		}
+	},
+	"Add_2G": {
+		"ITRAN-PNF:V5.75.20.20": {
+			"hwWorkScence_mapping": {
+				"R9244_S9000(D6A)": {
+					"2G": "2",
+					"3G": "1",
+					"2G,3G": "1;2",
+					"2G,3G,4G": "1;2;16;64"
+				},
+				"R9264_M1821(ACA)": {
+					"2G": "1;2;16;64",
+					"2G,3G": "1;2;16;64",
+					"2G,3G,4G": "1;2;16;64",
+					"3G": "1;2;16;64",
+					"3G,4G": "1;2;16;64",
+					"4G": "1;2;16;64"
+				},
+				"R8854E_S2600(A6A)": {
+					"4G": "16"
+				}
+			},
+			"functionMode_mapping": {
+				"R9244_S9000(D6A)": {
+					"2G": "0",
+					"3G": "1",
+					"2G,3G": "24",
+					"2G,3G,4G": "15"
+				},
+				"R9264_M1821(ACA)": {
+					"2G": "15",
+					"2G,3G": "15",
+					"2G,3G,4G": "15",
+					"3G": "15",
+					"3G,4G": "15",
+					"4G": "15"
+				},
+				"R8854E_S2600(A6A)": {
+					"4G": "1281"
+				}
+			}
+		}
+	},
+	"Huawei_config": {
+		"RRU": {
+			"R9244_S9000(D6A)": {
+				"Tx": "1",
+				"Rx": "2"
+			},
+			"R9264_M1821(ACA)": {
+				"Tx": "4",
+				"Rx": "4"
+			},
+			"R8854_S2600(A4A)": {
+				"Tx": "4",
+				"Rx": "4"
+			},
+			"RRU3804": {
+				"Tx": "1",
+				"Rx": "2"
+			},
+			"RRU3826": {
+				"Tx": "1",
+				"Rx": "2"
+			},
+			"RRU3926": {
+				"Tx": "1",
+				"Rx": "2"
+			},
+			"RRU3936": {
+				"Tx": "1",
+				"Rx": "2"
+			},
+			"RRU3938": {
+				"Tx": "2",
+				"Rx": "2"
+			},
+			"RRU3953": {
+				"Tx": "2",
+				"Rx": "4"
+			},
+			"RRU3959a": {
+				"Tx": "2",
+				"Rx": "2"
+			},
+			"RRU5301": {
+				"Tx": "4",
+				"Rx": "4"
+			},
+			"RRU5304": {
+				"Tx": "4",
+				"Rx": "4"
+			},
+			"RRU5304w": {
+				"Tx": "4",
+				"Rx": "4"
+			},
+			"RRU5904": {
+				"Tx": "4",
+				"Rx": "4"
+			},
+			"RRU5909": {
+				"Tx": "2",
+				"Rx": "2"
+			},
+			"RRU5910": {
+				"Tx": "4",
+				"Rx": "4"
+			}
+		},
+		"bandwidth_mapping": {
+			"1.4": "CELL_BW_N6",
+			"3.0": "CELL_BW_N15",
+			"5.0": "CELL_BW_N25",
+			"10.0": "CELL_BW_N50",
+			"15.0": "CELL_BW_N75",
+			"20.0": "CELL_BW_N100",
+			"3": "CELL_BW_N15",
+			"5": "CELL_BW_N25",
+			"10": "CELL_BW_N50",
+			"15": "CELL_BW_N75",
+			"20": "CELL_BW_N100"
+		},
+		"lteBand": {
+			"1850": 3,
+			"2800": 7,
+			"2950": 7
+		},
+		"NSEI": {
+			"DABC01": [
+				6501,
+				6521,
+				6531
+			],
+			"DABC02": [
+				6502,
+				6522,
+				6532
+			],
+			"DABC03": [
+				6503,
+				6523,
+				6533
+			],
+			"DABC04": [
+				6504,
+				6524,
+				6534
+			],
+			"DABC05": [
+				6505,
+				6525,
+				6535
+			],
+			"DABC06": [
+				6506,
+				6526,
+				6536
+			],
+			"DABC07": [
+				6507,
+				6527,
+				6537
+			],
+			"MWBC10": [
+				7050
+			],
+			"MWBC11": [
+				6961,
+				6962
+			],
+			"MWBC12": [
+				6963,
+				6964
+			],
+			"MWBC13": [
+				6965,
+				6966
+			]
+		},
+		"gsmBand": {
+			"3": "DCS1800",
+			"8": "GSM900"
+		},
+		"BSC Transmission Resource Pool Index": {
+			"Use for BSC6910": [
+				"3",
+				"4"
+			],
+			"DABC08": [
+				"3",
+				"4"
+			],
+			"MWBC10": [
+				"3",
+				"4"
+			]
+		}
+	}
+}

@@ -1,0 +1,179 @@
+================================================================================
+                     SPU TOOL V1 - PARAMETER GUIDE
+================================================================================
+
+This guide explains key parameters you can modify in the tool.
+
+================================================================================
+1. NE_NAME PATTERN (excel_handler.py, line 81)
+================================================================================
+
+Location: src/excel_handler.py
+Function: _filter_instruction_rows()
+
+Current Pattern:
+    r'^[ge][A-Z]{2,3}\d+[A-Z]?$'
+
+Explanation:
+    ^           - Start of string
+    [ge]        - Must start with 'g' or 'e'
+    [A-Z]{2,3}  - Followed by 2-3 uppercase letters (BL, BLT, CMT, etc.)
+    \d+         - Followed by one or more digits
+    [A-Z]?      - Optional single uppercase letter at end
+    $           - End of string
+
+Matches:
+    gBL00506    (g + BL + 00506)
+    gBLT8509    (g + BLT + 8509)
+    gCMT8910    (g + CMT + 8910)
+    eCM00025Z   (e + CM + 00025 + Z)
+
+To modify:
+    - Allow 4 letters: change {2,3} to {2,4}
+    - Allow any letters: change {2,3} to +
+    - Add lowercase: change [A-Z] to [A-Za-z]
+
+================================================================================
+2. STANDARD SHEETS (excel_handler.py, line 13-17)
+================================================================================
+
+Location: src/excel_handler.py
+Variable: STANDARD_SHEETS
+
+Current:
+    STANDARD_SHEETS = [
+        "IP", "Radio 2G", "Radio 3G", "Radio 4G", "Radio 5G",
+        "2G-2G", "2G-3G", "2G-4G", "3G-2G", "3G-3G", "3G-4G",
+        "RET", "Mapping"
+    ]
+
+To modify:
+    - Add new sheet: Add sheet name to the list
+    - Remove sheet: Remove sheet name from the list
+    - Rename sheet: Change the string to match your Excel sheet name
+
+================================================================================
+3. GUI WINDOW SIZE (gui.py, line 24-25)
+================================================================================
+
+Location: src/gui.py
+Function: __init__()
+
+Current:
+    self.root.geometry("1400x800")    # Initial window size
+    self.root.minsize(1200, 600)      # Minimum window size
+
+Format: "WIDTHxHEIGHT"
+
+To modify:
+    - Larger window: "1600x900"
+    - Smaller window: "1000x700"
+
+================================================================================
+4. DATA DISPLAY ROW LIMIT (gui.py, line 226)
+================================================================================
+
+Location: src/gui.py
+Function: _populate_data_display()
+
+Current:
+    for idx, row in df.head(1000).iterrows():
+
+This limits display to first 1000 rows for performance.
+
+To modify:
+    - Show more rows: df.head(2000)
+    - Show all rows: df.iterrows() (remove .head())
+    - Show fewer rows: df.head(500)
+
+================================================================================
+5. COLUMN WIDTH (gui.py, line 223)
+================================================================================
+
+Location: src/gui.py
+Function: _populate_data_display()
+
+Current:
+    tree.column(col, width=100, minwidth=50)
+
+To modify:
+    - Wider columns: width=150, minwidth=80
+    - Narrower columns: width=80, minwidth=40
+
+================================================================================
+6. TAB/SHEET NAMES IN GUI (gui.py, line 130-134)
+================================================================================
+
+Location: src/gui.py
+Function: _create_data_display()
+
+Current:
+    sheet_names = [
+        "IP", "Radio 2G", "Radio 3G", "Radio 4G", "Radio 5G",
+        "2G-2G", "2G-3G", "2G-4G", "3G-2G", "3G-3G", "3G-4G",
+        "RET", "Mapping"
+    ]
+
+To modify:
+    - This should match STANDARD_SHEETS in excel_handler.py
+    - Add/remove tabs by modifying this list
+
+================================================================================
+7. INSTRUCTION ROW PATTERNS (excel_handler.py, line 89-92)
+================================================================================
+
+Location: src/excel_handler.py
+Function: _filter_instruction_rows()
+
+Current patterns to filter out:
+    instruction_patterns = [
+        'Mandatory', 'Optional', 'string:', 'integer:',
+        'Bat buoc', 'Co the', 'use for', 'Site name'
+    ]
+
+To modify:
+    - Add new pattern to filter: Add string to list
+    - Keep a pattern: Remove from list
+
+================================================================================
+8. FILE TYPE FILTERS (gui.py, line 176, 239)
+================================================================================
+
+Location: src/gui.py
+Functions: _select_input_file(), _select_template_file()
+
+Current:
+    filetypes=[("Excel files", "*.xlsx *.xls"), ("All files", "*.*")]
+
+To modify:
+    - Add CSV support: ("CSV files", "*.csv")
+    - Only xlsx: ("Excel files", "*.xlsx")
+
+================================================================================
+FILE STRUCTURE
+================================================================================
+
+SPU_Tool_V1/
+├── main.py              # Entry point
+├── pyproject.toml       # Dependencies
+├── PARAMETER_GUIDE.txt  # This guide
+└── src/
+    ├── __init__.py      # Package init
+    ├── excel_handler.py # Excel read/write (NE_Name pattern here)
+    ├── gui.py           # Tkinter GUI (window size, tabs here)
+    ├── processor.py     # Data processing logic
+    ├── mapping_engine.py# Mapping rules
+    ├── streamlit_app.py # Streamlit GUI (alternative)
+    └── utils.py         # Utility functions
+
+================================================================================
+HOW TO RUN
+================================================================================
+
+Using uv:
+    uv run python main.py --tkinter
+
+Using python directly (after installing dependencies):
+    python main.py --tkinter
+
+================================================================================
