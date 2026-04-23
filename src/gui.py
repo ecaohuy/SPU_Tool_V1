@@ -39,7 +39,7 @@ class ModernStyle:
 class SPUToolGUI:
     """Main GUI Application class with modern design."""
 
-    VERSION = "1.1.0"
+    VERSION = "2.0.0"
 
     def __init__(self, root):
         self.root = root
