@@ -77,8 +77,8 @@ class ExcelHandler:
         # For sheets with NE_Name column, filter by valid NE_Name pattern
         if "NE_Name" in df.columns:
             # Valid NE_Name starts with 'g' or 'e' followed by letters and numbers
-            # e.g., gBL00231Z, eCM00025Z, gBLT8509, gCMT8910
-            mask = df["NE_Name"].astype(str).str.match(r'^[ge][A-Z]{2,3}\d+[A-Z]?$', na=False)
+            # e.g., gBL00231Z, eCM00025Z, gBLT8509, gCMT8910, eBL00507NR0
+            mask = df["NE_Name"].astype(str).str.match(r'^[ge][A-Z]{2,}\d+[A-Z0-9]*$', na=False)
             return df[mask].reset_index(drop=True)
 
         # For other sheets, try to filter by common patterns

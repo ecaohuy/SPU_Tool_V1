@@ -150,9 +150,25 @@ class SPUProcessor:
                 return row + 1
         return 6  # Default: assume 5 header rows
 
+    def _clear_data_rows(self, wb):
+        """Clear existing data rows from all data sheets in the template."""
+        data_sheets = ["site", "BBU", "RU", "cable", "AisgCtrlPort",
+                       "DryContactCable", "Ip", "Sctp", "cell5g", "cell4g"]
+        for sheet_name in data_sheets:
+            if sheet_name not in wb.sheetnames:
+                continue
+            ws = wb[sheet_name]
+            start_row = self._find_data_start_row(ws)
+            for row in range(start_row, ws.max_row + 1):
+                for col in range(1, ws.max_column + 1):
+                    ws.cell(row=row, column=col).value = None
+
     def _process_group(self, group):
         """Process a single group and generate output file."""
         wb = load_workbook(self.template_path)
+
+        # Clear existing sample data from template before writing new data
+        self._clear_data_rows(wb)
 
         # Process 'site' sheet first (special handling for subNetwork)
         self._process_site_sheet(wb)

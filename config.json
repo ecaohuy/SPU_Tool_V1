@@ -163,6 +163,18 @@
 		"HLAMF02": [
 			"10.196.36.41",
 			"10.196.36.42"
+		],
+		"HAAMF01": [
+			"10.196.202.135",
+			"10.196.202.136"
+		],
+		"HKAMF01": [
+			"10.215.168.135",
+			"10.215.168.136"
+		],
+		"HTAMF03": [
+			"10.204.202.135",
+			"10.204.202.136"
 		]
 	},
 	"ptp_primary": [
@@ -1363,6 +1375,46 @@
 						"networkBackupMode": "0",
 						"redundancyModeSwitch": ""
 					}
+				],
+				"10G;e2q_3:3NR+12FDL": [
+					{
+						"moId": "VBP_1_3",
+						"name": "VBPe2q",
+						"hwWorkScence": "16;8192",
+						"functionMode": "36906",
+						"bpPoolFunction": "BF_3",
+						"redundancyModeSwitch": "0",
+						"lte": 12,
+						"nr": 3
+					},
+					{
+						"moId": "VEM_1_13",
+						"name": "VEMc4",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VFC_1_14",
+						"name": "VFC1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VPD_1_5",
+						"name": "VPDc1",
+						"hwWorkScence": "0",
+						"functionMode": "0"
+					},
+					{
+						"moId": "VSW_1_1",
+						"name": "VSWd1",
+						"hwWorkScence": "0",
+						"functionMode": "0",
+						"vswPortInfo": "ETH1:10G",
+						"mainCtrlWorkMode": "0",
+						"networkBackupMode": "0",
+						"redundancyModeSwitch": ""
+					}
 				]
 			},
 			"udttc_configs": {
@@ -1377,7 +1429,7 @@
 				"NDS-DCM": {
 					"transType": "0",
 					"ipVersion": "0",
-					"ipAddr": "10.29.147.162",
+					"ipAddr": "10.76.57.143",
 					"port": "14061",
 					"localIP": "",
 					"serverIpPrefixLength": "27"
@@ -1385,14 +1437,14 @@
 				"NdsDefault": {
 					"transType": "0",
 					"ipVersion": "0",
-					"ipAddr": "10.29.147.131",
+					"ipAddr": "10.76.57.131",
 					"port": "14061",
 					"serverIpPrefixLength": "27"
 				},
 				"OmcDefault": {
 					"transType": "0",
 					"ipVersion": "0",
-					"ipAddr": "10.29.147.131",
+					"ipAddr": "10.76.57.131",
 					"port": "14066",
 					"serverIpPrefixLength": "27"
 				}
