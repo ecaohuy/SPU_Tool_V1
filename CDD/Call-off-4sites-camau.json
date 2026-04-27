@@ -1,0 +1,314 @@
+[
+  {
+    "site_name": "CMU8905",
+    "sectors_4G": {
+      "sector_1": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ],
+      "sector_3": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ]
+    },
+    "sectors_5G": {
+      "sector_1": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_3": [
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ]
+    }
+  },
+  {
+    "site_name": "CMU8906",
+    "sectors_4G": {
+      "sector_1": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ],
+      "sector_3": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ]
+    },
+    "sectors_5G": {
+      "sector_1": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_3": [
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ]
+    }
+  },
+  {
+    "site_name": "BLU0507",
+    "sectors_4G": {
+      "sector_1": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ]
+    },
+    "sectors_5G": {
+      "sector_1": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_3": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        }
+      ]
+    }
+  },
+  {
+    "site_name": "BLU8509",
+    "sectors_4G": {
+      "sector_1": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "700",
+          "config": "4T"
+        },
+        {
+          "band": "1800",
+          "config": "4T"
+        },
+        {
+          "band": "2100",
+          "config": "4T"
+        }
+      ]
+    },
+    "sectors_5G": {
+      "sector_1": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_2": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        },
+        {
+          "band": "2600",
+          "config": "TDD"
+        }
+      ],
+      "sector_3": [
+        {
+          "band": "5G",
+          "config": "60 MHz"
+        }
+      ]
+    }
+  }
+]

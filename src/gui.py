@@ -5,12 +5,15 @@ import sys
 import subprocess
 import platform
 import tkinter as tk
+from pathlib import Path
 from tkinter import ttk, filedialog, messagebox
 import threading
 
 from .excel_handler import ExcelHandler
 from .processor import SPUProcessor
 from .utils import get_input_folder, get_template_folder
+from CDD.excel_to_json import convert as calloff_convert, default_output_path as calloff_default_output
+from CDD.fill_mimo import fill_workbook as cdd_fill_workbook
 
 
 class ModernStyle:
@@ -89,6 +92,8 @@ class SPUToolGUI:
         # File paths
         self.input_file_path = None
         self.template_file_path = None
+        self.calloff_file_path = None
+        self.calloff_json_path = None
 
         # Build UI
         self._create_widgets()
@@ -244,15 +249,23 @@ class SPUToolGUI:
         top_container.columnconfigure(0, weight=1)
         top_container.columnconfigure(1, weight=1)
         top_container.columnconfigure(2, weight=1)
+        top_container.columnconfigure(3, weight=1)
+        top_container.columnconfigure(4, weight=1)
+
+        # Call-off File Card (Step 1: Excel -> JSON)
+        self._create_calloff_card(top_container, 0)
 
         # Input File Card
-        self._create_input_card(top_container, 0)
+        self._create_input_card(top_container, 1)
 
         # Template Card
-        self._create_template_card(top_container, 1)
+        self._create_template_card(top_container, 2)
 
         # Output Card
-        self._create_output_card(top_container, 2)
+        self._create_output_card(top_container, 3)
+
+        # CDD Verification Card
+        self._create_verify_card(top_container, 4)
 
         # Status bar
         self._create_status_bar(main_frame)
@@ -321,6 +334,54 @@ class SPUToolGUI:
         separator.pack(fill=tk.X, pady=(0, 15))
 
         return card
+
+    def _create_calloff_card(self, parent, column):
+        """Create the Call-off File card (Excel -> JSON)."""
+        card = self._create_card_frame(parent, "Call-off File", column)
+
+        self.btn_select_calloff = tk.Button(
+            card,
+            text="Select Call-off File",
+            command=self._select_calloff_file,
+            font=("Segoe UI", 10),
+            bg=ModernStyle.BTN_PRIMARY,
+            fg=ModernStyle.TEXT_LIGHT,
+            activebackground=ModernStyle.BTN_PRIMARY_HOVER,
+            activeforeground=ModernStyle.TEXT_LIGHT,
+            relief="flat",
+            cursor="hand2",
+            padx=20,
+            pady=10
+        )
+        self.btn_select_calloff.pack(fill=tk.X, pady=(0, 8))
+
+        self.btn_autofill_cdd = tk.Button(
+            card,
+            text="CDD to autofill",
+            command=self._select_cdd_to_autofill,
+            font=("Segoe UI", 10, "bold"),
+            bg=ModernStyle.BTN_SUCCESS,
+            fg=ModernStyle.TEXT_LIGHT,
+            activebackground=ModernStyle.BTN_SUCCESS_HOVER,
+            activeforeground=ModernStyle.TEXT_LIGHT,
+            relief="flat",
+            cursor="hand2",
+            padx=20,
+            pady=10
+        )
+        self.btn_autofill_cdd.pack(fill=tk.X, pady=(0, 10))
+
+        self.lbl_calloff_file = tk.Label(
+            card,
+            text="No Call-off selected",
+            font=("Segoe UI", 9),
+            fg=ModernStyle.TEXT_SECONDARY,
+            bg=ModernStyle.BG_SECONDARY,
+            wraplength=350,
+            justify="left",
+            anchor="w"
+        )
+        self.lbl_calloff_file.pack(fill=tk.X)
 
     def _create_input_card(self, parent, column):
         """Create the Input File card."""
@@ -424,6 +485,57 @@ class SPUToolGUI:
         )
         self.lbl_output_file.pack(fill=tk.X)
 
+    def _create_verify_card(self, parent, column):
+        """Create the CDD Verification card."""
+        card = self._create_card_frame(parent, "CDD Verification", column)
+
+        # Verify button
+        self.btn_verify_cdd = tk.Button(
+            card,
+            text="Verify CDD",
+            command=self._verify_cdd,
+            font=("Segoe UI", 10),
+            bg=ModernStyle.BTN_PRIMARY,
+            fg=ModernStyle.TEXT_LIGHT,
+            activebackground=ModernStyle.BTN_PRIMARY_HOVER,
+            activeforeground=ModernStyle.TEXT_LIGHT,
+            relief="flat",
+            cursor="hand2",
+            padx=20,
+            pady=10
+        )
+        self.btn_verify_cdd.pack(fill=tk.X, pady=(0, 8))
+
+        # Auto-correct button
+        self.btn_autocorrect_cdd = tk.Button(
+            card,
+            text="Auto-correct",
+            command=self._autocorrect_cdd,
+            font=("Segoe UI", 10, "bold"),
+            bg=ModernStyle.BG_WARNING,
+            fg=ModernStyle.TEXT_LIGHT,
+            activebackground="#d68910",
+            activeforeground=ModernStyle.TEXT_LIGHT,
+            relief="flat",
+            cursor="hand2",
+            padx=20,
+            pady=10
+        )
+        self.btn_autocorrect_cdd.pack(fill=tk.X, pady=(0, 10))
+
+        # Result label
+        self.lbl_verify_result = tk.Label(
+            card,
+            text="No verification run yet",
+            font=("Segoe UI", 9),
+            fg=ModernStyle.TEXT_SECONDARY,
+            bg=ModernStyle.BG_SECONDARY,
+            wraplength=350,
+            justify="left",
+            anchor="w"
+        )
+        self.lbl_verify_result.pack(fill=tk.X)
+
     def _create_status_bar(self, parent):
         """Create the status bar."""
         status_frame = tk.Frame(parent, bg=ModernStyle.BG_PRIMARY)
@@ -504,6 +616,98 @@ class SPUToolGUI:
             tree.pack(fill=tk.BOTH, expand=True)
 
             self.treeviews[sheet_name] = tree
+
+    def _select_calloff_file(self):
+        """Pick a Call-off xlsx and convert it to JSON."""
+        initial_dir = get_input_folder()
+        if not os.path.exists(initial_dir):
+            initial_dir = os.path.expanduser("~")
+
+        file_path = filedialog.askopenfilename(
+            title="Select Call-off File",
+            initialdir=initial_dir,
+            filetypes=[("Excel files", "*.xlsx *.xls"), ("All files", "*.*")]
+        )
+        if not file_path:
+            return
+
+        self.calloff_file_path = file_path
+        self.lbl_calloff_file.config(
+            text=f"{os.path.basename(file_path)}\nConverting to JSON...",
+            fg=ModernStyle.TEXT_PRIMARY,
+        )
+        self._update_status(f"Converting Call-off: {os.path.basename(file_path)}")
+
+        thread = threading.Thread(target=self._run_calloff_conversion, args=(file_path,))
+        thread.daemon = True
+        thread.start()
+
+    def _run_calloff_conversion(self, file_path):
+        """Background worker: convert Call-off xlsx to JSON."""
+        try:
+            xlsx_path = Path(file_path)
+            data = calloff_convert(xlsx_path)
+            out_path = calloff_default_output(xlsx_path)
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            import json
+            out_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+            self.calloff_json_path = str(out_path)
+            self.root.after(
+                0,
+                self._on_calloff_done,
+                f"{os.path.basename(file_path)}\nJSON: {out_path}",
+                f"Call-off converted: {len(data)} sites",
+            )
+        except Exception as exc:
+            self.root.after(0, self._show_error, f"Call-off conversion failed: {exc}")
+
+    def _on_calloff_done(self, label_text, status_text):
+        self.lbl_calloff_file.config(text=label_text, fg=ModernStyle.TEXT_PRIMARY)
+        self._update_status(status_text)
+
+    def _select_cdd_to_autofill(self):
+        """Pick the empty CDD xlsx and run auto-fill against the Call-off JSON."""
+        if not self.calloff_json_path:
+            self._show_error("Select a Call-off file first to produce the JSON.")
+            return
+
+        initial_dir = get_input_folder()
+        if not os.path.exists(initial_dir):
+            initial_dir = os.path.expanduser("~")
+
+        file_path = filedialog.askopenfilename(
+            title="Select CDD to Auto-Fill",
+            initialdir=initial_dir,
+            filetypes=[("Excel files", "*.xlsx *.xls"), ("All files", "*.*")]
+        )
+        if not file_path:
+            return
+
+        self._update_status(f"Auto-filling: {os.path.basename(file_path)}")
+        thread = threading.Thread(target=self._run_cdd_autofill, args=(file_path,))
+        thread.daemon = True
+        thread.start()
+
+    def _run_cdd_autofill(self, file_path):
+        try:
+            counts, counts_5g, skipped, out_path = cdd_fill_workbook(
+                Path(file_path), Path(self.calloff_json_path)
+            )
+            total_4g = sum(counts.values())
+            total_5g = sum(counts_5g.values())
+            self.input_file_path = str(out_path)
+            self.root.after(0, self._on_autofill_done, str(out_path), total_4g, total_5g, len(skipped))
+        except Exception as exc:
+            self.root.after(0, self._show_error, f"Auto-fill failed: {exc}")
+
+    def _on_autofill_done(self, out_path, total_4g, total_5g, skipped_count):
+        self.lbl_input_file.config(text=out_path, fg=ModernStyle.TEXT_PRIMARY)
+        self._update_status(
+            f"Auto-fill done. 4G:{total_4g} 5G:{total_5g} skipped:{skipped_count}. Loaded as Input File."
+        )
+        thread = threading.Thread(target=self._load_input_file)
+        thread.daemon = True
+        thread.start()
 
     def _select_input_file(self):
         """Handle input file selection."""
@@ -666,6 +870,124 @@ class SPUToolGUI:
         self.lbl_status.config(fg=ModernStyle.BG_SUCCESS)
         self.progress["value"] = 100
         messagebox.showinfo("Success", message)
+
+    def _verify_cdd(self):
+        """Run CDD verification on the selected input file."""
+        if not self.input_file_path:
+            self._show_error("Please select a CDD input file first")
+            return
+
+        self.btn_verify_cdd.config(state=tk.DISABLED, bg=ModernStyle.TEXT_SECONDARY)
+        self.btn_autocorrect_cdd.config(state=tk.DISABLED, bg=ModernStyle.TEXT_SECONDARY)
+        self._update_status("Verifying CDD...")
+        self.lbl_verify_result.config(text="Running verification...", fg=ModernStyle.TEXT_SECONDARY)
+
+        thread = threading.Thread(target=self._run_verify_cdd)
+        thread.daemon = True
+        thread.start()
+
+    def _run_verify_cdd(self):
+        """Run verify_cdd in background."""
+        try:
+            from pathlib import Path
+            import verify_cdd as vc
+
+            xlsx_path = Path(self.input_file_path)
+            wb = vc._load(xlsx_path, data_only=True)
+            if wb is None:
+                raise RuntimeError("Workbook missing required 'IP' sheet")
+
+            ip, rows4g, rows5g = vc._gather(wb)
+            findings = vc.collect_findings(ip, rows4g, rows5g)
+
+            json_path = xlsx_path.with_suffix(xlsx_path.suffix + ".findings.json")
+            csv_path = xlsx_path.with_suffix(xlsx_path.suffix + ".findings.csv")
+            vc.write_json(findings, xlsx_path, json_path)
+            vc.write_csv(findings, csv_path)
+
+            count = len(findings)
+            if count == 0:
+                summary = "OK: no findings"
+                detail = f"OK: no findings.\n\nReports written:\n{json_path}\n{csv_path}"
+            else:
+                summary = f"{count} finding(s). See:\n{csv_path.name}"
+                detail = (f"Found {count} finding(s).\n\nReports written:\n"
+                          f"{json_path}\n{csv_path}")
+
+            self.root.after(0, self._verify_done, summary, detail, count == 0)
+        except Exception as e:
+            self.root.after(0, self._verify_failed, f"Verification failed: {e}")
+
+    def _autocorrect_cdd(self):
+        """Run CDD auto-correction on the selected input file."""
+        if not self.input_file_path:
+            self._show_error("Please select a CDD input file first")
+            return
+
+        self.btn_verify_cdd.config(state=tk.DISABLED, bg=ModernStyle.TEXT_SECONDARY)
+        self.btn_autocorrect_cdd.config(state=tk.DISABLED, bg=ModernStyle.TEXT_SECONDARY)
+        self._update_status("Auto-correcting CDD...")
+        self.lbl_verify_result.config(text="Applying fixes...", fg=ModernStyle.TEXT_SECONDARY)
+
+        thread = threading.Thread(target=self._run_autocorrect_cdd)
+        thread.daemon = True
+        thread.start()
+
+    def _run_autocorrect_cdd(self):
+        """Run verify_cdd --fix in background."""
+        try:
+            from pathlib import Path
+            import verify_cdd as vc
+
+            xlsx_path = Path(self.input_file_path)
+            wb = vc._load(xlsx_path, data_only=False)
+            if wb is None:
+                raise RuntimeError("Workbook missing required 'IP' sheet")
+
+            ip, rows4g, rows5g = vc._gather(wb)
+            findings = vc.collect_findings(ip, rows4g, rows5g)
+            applied, skipped = vc.apply_fixes(wb, findings)
+
+            out_path = xlsx_path.with_name(xlsx_path.stem + "_fixed" + xlsx_path.suffix)
+            wb.save(out_path)
+
+            ip2, rows4g2, rows5g2 = vc._gather(wb)
+            remaining = vc.collect_findings(ip2, rows4g2, rows5g2)
+
+            json_path = out_path.with_suffix(out_path.suffix + ".findings.json")
+            csv_path = out_path.with_suffix(out_path.suffix + ".findings.csv")
+            vc.write_json(remaining, out_path, json_path)
+            vc.write_csv(remaining, csv_path)
+
+            summary = (f"Applied {len(applied)} fix(es); "
+                       f"{len(remaining)} remaining.\nSaved: {out_path.name}")
+            detail = (f"Applied {len(applied)} fix(es).\n"
+                      f"{len(remaining)} finding(s) remain (non-deterministic).\n\n"
+                      f"Fixed workbook:\n{out_path}\n\n"
+                      f"Reports:\n{json_path}\n{csv_path}")
+
+            self.root.after(0, self._verify_done, summary, detail, len(remaining) == 0)
+        except Exception as e:
+            self.root.after(0, self._verify_failed, f"Auto-correct failed: {e}")
+
+    def _verify_done(self, summary, detail, clean):
+        """Re-enable verify buttons and show result."""
+        color = ModernStyle.BG_SUCCESS if clean else ModernStyle.BG_WARNING
+        self.lbl_verify_result.config(text=summary, fg=color)
+        self._update_status("Verification complete")
+        self.btn_verify_cdd.config(state=tk.NORMAL, bg=ModernStyle.BTN_PRIMARY)
+        self.btn_autocorrect_cdd.config(state=tk.NORMAL, bg=ModernStyle.BG_WARNING)
+        if clean:
+            messagebox.showinfo("CDD Verification", detail)
+        else:
+            messagebox.showwarning("CDD Verification", detail)
+
+    def _verify_failed(self, message):
+        """Re-enable verify buttons and show error."""
+        self.lbl_verify_result.config(text="Failed", fg="#e74c3c")
+        self.btn_verify_cdd.config(state=tk.NORMAL, bg=ModernStyle.BTN_PRIMARY)
+        self.btn_autocorrect_cdd.config(state=tk.NORMAL, bg=ModernStyle.BG_WARNING)
+        self._show_error(message)
 
     def _open_file(self, file_path):
         """Open file with default application based on OS."""

@@ -1,0 +1,1 @@
+- Only compare 3 sheets: IP, Radio 4G, Radio 5G
