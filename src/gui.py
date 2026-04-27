@@ -255,17 +255,17 @@ class SPUToolGUI:
         # Call-off File Card (Step 1: Excel -> JSON)
         self._create_calloff_card(top_container, 0)
 
+        # CDD Verification Card
+        self._create_verify_card(top_container, 1)
+
         # Input File Card
-        self._create_input_card(top_container, 1)
+        self._create_input_card(top_container, 2)
 
         # Template Card
-        self._create_template_card(top_container, 2)
+        self._create_template_card(top_container, 3)
 
         # Output Card
-        self._create_output_card(top_container, 3)
-
-        # CDD Verification Card
-        self._create_verify_card(top_container, 4)
+        self._create_output_card(top_container, 4)
 
         # Status bar
         self._create_status_bar(main_frame)
@@ -966,9 +966,18 @@ class SPUToolGUI:
                       f"Fixed workbook:\n{out_path}\n\n"
                       f"Reports:\n{json_path}\n{csv_path}")
 
-            self.root.after(0, self._verify_done, summary, detail, len(remaining) == 0)
+            self.input_file_path = str(out_path)
+            self.root.after(0, self._autocorrect_done, str(out_path), summary, detail, len(remaining) == 0)
         except Exception as e:
             self.root.after(0, self._verify_failed, f"Auto-correct failed: {e}")
+
+    def _autocorrect_done(self, out_path, summary, detail, clean):
+        """Reload fixed workbook as Input File, then show verification result."""
+        self.lbl_input_file.config(text=out_path, fg=ModernStyle.TEXT_PRIMARY)
+        thread = threading.Thread(target=self._load_input_file)
+        thread.daemon = True
+        thread.start()
+        self._verify_done(summary, detail, clean)
 
     def _verify_done(self, summary, detail, clean):
         """Re-enable verify buttons and show result."""
